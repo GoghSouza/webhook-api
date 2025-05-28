@@ -10,7 +10,7 @@ cache = Cache(app, config={'CACHE_TYPE': 'SimpleCache', 'CACHE_DEFAULT_TIMEOUT':
 
 @app.route('/teste', methods=['GET']) 
 def teste():
-    return jsonify({"message": "Hello World"}), 200
+    return jsonify({"message": "Gogh Approves"}), 200
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
