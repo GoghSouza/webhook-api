@@ -18,7 +18,7 @@ def webhook():
     cache.set(webhook, (body))
     return jsonify(body), 200
 
-@app.route('webhook/edit', methods=['POST'])
+@app.route('/webhook/edit', methods=['POST'])
 def editwebhook():
     body = request.json
     cache.set(webhook, (body))
