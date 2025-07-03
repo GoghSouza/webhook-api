@@ -18,6 +18,12 @@ def webhook():
     cache.set(webhook, (body))
     return jsonify(body), 200
 
+@app.route('/webhook/edit', methods=['POST'])
+def webhook():
+    body = request.json
+    cache.set(webhook, (body))
+    return jsonify(body), 200
+
 @app.route('/webhook/consulta', methods=['GET'])
 def consulta():
     return jsonify(cache.get(webhook))
